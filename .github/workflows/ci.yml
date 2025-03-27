@@ -1,0 +1,16 @@
+name: CI test
+on:
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  CI:
+    name: integration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout to repository
+        uses: actions/checkout@v3
+
+      - name: Run build
+        run: npm run build
