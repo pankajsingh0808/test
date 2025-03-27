@@ -12,5 +12,8 @@ jobs:
       - name: Checkout to repository
         uses: actions/checkout@v3
 
+      - name: install dependencies
+        uses : npm install
+
       - name: Run build
         run: npm run build

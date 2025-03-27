@@ -21,6 +21,7 @@ app.post("/user", async (req: Request, res: Response) => {
       password,
     },
   });
+  console.log("user", user);
   res.send({
     user,
   });
